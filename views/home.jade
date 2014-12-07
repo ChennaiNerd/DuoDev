@@ -1,10 +1,33 @@
-extends layout
+doctype html
+html(ng-app="myApp", ng-init="operatorName = '#{operatorName}';")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='csrf-token', content=_csrf)
+    meta(name='author', content='')
+    title #{title} | DuoDev
+    != css('styles')
+    != css('index')
+  body(ng-controller="MainController")
 
-block content
   .hero-unit
-    p.lead.
-      DuoDev
-    h1 Learning X in Y levels
+    h1 DuoDev
+    p.subtitle Learning X in Y levels
+    .container
+      form.form-signup.form-inline(role='form', method='POST', action-="/signup")
+        .form-group
+          input.form-control(type='text', name='name', id='name', autofocus=true, placeholder="Name", required)
+        .form-group
+          input.form-control(type='email', name='email', id='email', , placeholder="Email", required)
+        .form-group
+          button.btn.btn-success.btn-lg(type='submit')
+            span.ion-paper-airplane
+            | Start
+      .features
+        a.btn.btn-link.btn-video(href="") Watch demo video
 
-  .container
-    .features
+    include partials/footer
+
+    != js('application')
