@@ -34,7 +34,10 @@
             {"type": "choice", "question": "What is the syntax for FOR loop?", "choices": ["for ( variable initialization; condition; variable update )",
             "for ( condition; variable update ; exit status)", "for (condition 1; condition 2; condition 3)", "for ( variable increment ; variable decrement; condition )"
             ], "answer": "for ( variable initialization; condition; variable update )"},
-            {"type": "blank", "question": "Which looping makes sure loop is executed atleast once?", "choices": ["for", "while", "do..while", "None"], "answer": "do..while"}
+            {"type": "choice", "question": "Which looping makes sure loop is executed atleast once?", "choices": ["for", "while", "do..while", "None"], "answer": "do..while"},
+            {"type": "choice", "question": "for (i = 0; i = 5; i++) { printf(\"%d\", i);} How many times will the statement inside the loop get executed?", "choices" : ["5", "1", "6", "infinite"], "answer": "infinite"},
+            {"type": "blank", "question": "What is the statement used to jump out of a loop", "answer": "break"},
+            {"type": "blank", "question": "What is the statement used to jump back to the beginning of the loop", "answer": "continue"},
 
           ]
         }
