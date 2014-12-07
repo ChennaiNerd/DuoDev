@@ -20,8 +20,8 @@ angular.module('myApp', [ 'ngSanitize', 'ui.router',  'firebase'  ])
       controller: 'LanguageController'
     })
 
-    .state('language.practice', {
-      url: '/:level',
+    .state('practice', {
+      url: '/languages/:language/:level',
       templateUrl: 'templates/practice.html',
       controller: 'PracticeController'
     })

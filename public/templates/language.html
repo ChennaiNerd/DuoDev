@@ -2,15 +2,17 @@
     <div class="container">
 
         <h1 class="heading no-bottom-margin">{{language}}</h1>
-        <p class="subtitle">Level {{levelCount}}</p>
+        <p class="subtitle">Levels {{levelsCount}}</p>
 
-        <div ng-repeat="items in levels" class="row">
-            <div ng-repeat="item in items" class="col-md-4">
-                <a ng-href="#/languages/practice/{{item}}">
-                    <div class="level-box">
-                        <span class="level-label">{{item}}</span>
-                    </div>
-                </a>
+        <div ng-repeat="items in levelsSplitArray" class="row levels-row">
+            <div class="{{getContainerClass(items.length)}}">
+                <div ng-repeat="item in items" class="{{getClass(items.length)}}">
+                    <a ng-href="#/languages/practice/{{item}}">
+                        <div class="level-box">
+                            <span class="level-label">{{item}}</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
