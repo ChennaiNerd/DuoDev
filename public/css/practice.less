@@ -36,6 +36,19 @@
     -webkit-border-radius: 0 0 5px 5px;
     -moz-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
-    padding: 30px 40px;
+    padding: 30px 20px;
+}
+
+.radio label {
+    font-size: 18px;
+}
+
+.radio label::before {
+    border: 1px solid #666 !important;
+    margin-top: 5px !important;
+}
+
+.radio-success input[type="radio"]:checked + label::after {
+    margin-top: 5px !important;
 }
 

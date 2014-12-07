@@ -96,6 +96,11 @@ angular.module('myApp')
         function($scope, $stateParams, $location, JSONService, $firebase, fbUrl, $window) {
 
     $scope.selectionIndex = 0;
+    $scope.correct = false;
+    $scope.wrong = false;
+    $scope.answer = {
+        value : null
+    };
 
     $scope.language = $stateParams.language;
     $scope.levelIndex = $stateParams.level;
@@ -110,7 +115,20 @@ angular.module('myApp')
         }).finally(function () {
         });
 
+    $scope.check = function (item) {
+        if (item.answer === $scope.answer.value) {
+            $scope.correct = true;
+            $scope.wrong = false;
+        } else {
+            $scope.correct = false;
+            $scope.wrong = true;
+        }
+    }
+
     $scope.continue = function (index) {
         $scope.selectionIndex = index;
+        $scope.answer.value = null;
+        $scope.correct = false;
+        $scope.wrong = false;
     }
 });

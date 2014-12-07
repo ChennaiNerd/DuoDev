@@ -4,20 +4,37 @@
             <span class="badge badge-primary">{{selectionIndex}} / {{questionsCount}}</span>
         </div>
         <h1 class="heading no-bottom-margin">{{level.name}}</h1>
-        <p class="subtitle"><a href="#/languages/{{language}}">{{language}} Level</a> - {{levelIndex}}</p>
+        <p class="subtitle"><a href="#/languages/{{language}}">{{language}} </a> - Level {{levelIndex}}</p>
         <br>
 
         <div ng-repeat="item in level.questions" ng-if="selectionIndex === $index">
             <div class="question">
                 <p class="lead">{{item.question}}</p>
-
+                <div ng-if="item.type === 'choice'">
+                    <div class="radio radio-success" ng-repeat="choice in item.choices">
+                      <input type="radio" name="radio" id="radio-{{$index}}" value="{{choice}}"
+                      ng-model="answer.value">
+                      <label for="radio-{{$index}}">
+                          {{choice}}
+                      </label>
+                    </div>
+                </div>
+                <div ng-if="item.type === 'blank'">
+                    <input type="text" class="form-control" ng-model="answer.value">
+                </div>
             </div>
             <div class="action-footer">
-                <button class="btn btn-success btn-lg" ng-click="check($index)">
+                <button class="btn btn-success btn-lg" ng-click="check(item, anwser)" ng-if="!correct">
                    <i class="icon ion-checkmark-circled"></i> Check
                 </button>
                 &nbsp; &nbsp;
-                <button class="btn btn-success btn-lg" ng-click="continue($index)">Continue</button>
+                <button class="btn btn-success btn-lg" ng-click="continue( $index + 1 )" ng-if="correct">Continue</button>
+                <span class="text-success" ng-if="correct">
+                    You are correct
+                </span>
+                <span class="text-danger" ng-if="wrong">
+                    Correct solution: {{item.answer}}
+                </span>
             </div>
         </div>
     </div>
