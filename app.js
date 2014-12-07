@@ -24,7 +24,6 @@ var connectAssets = require('connect-assets');
  */
 
 var appController = require('./controllers/app');
-var contactController = require('./controllers/contact');
 
 /**
  * API keys and Passport configuration.
@@ -104,8 +103,6 @@ app.get('/', appController.index);
 app.post('/', appController.post);
 app.get('/app', appController.app);
 app.get('/logout', appController.logout);
-app.get('/contact', contactController.getContact);
-app.post('/contact', contactController.postContact);
 
 /**
  * 500 Error Handler.

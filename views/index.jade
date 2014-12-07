@@ -8,7 +8,6 @@ html(ng-app="myApp", ng-init="operatorName = '#{operatorName}';")
     meta(name='csrf-token', content=_csrf)
     meta(name='author', content='')
 
-    link(href='http://fonts.googleapis.com/css?family=Raleway', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700', rel='stylesheet', type='text/css')
     title #{title} | Learn X in Y levels
@@ -17,8 +16,10 @@ html(ng-app="myApp", ng-init="operatorName = '#{operatorName}';")
 
   body
     .hero-unit
-      h1 DuoDev
-      p.subtitle Learning X in Y levels
+      h1
+        img.img-100(src="/img/logo.png", alt="")
+        |  DuoDev
+      p.subtitle Learning X in Y levels. The best new way to learn a computer language.
       .container
         include partials/flash
         form.form-signup.form-inline(role='form', method='POST', action="/")
