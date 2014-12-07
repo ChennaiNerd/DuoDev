@@ -21,7 +21,7 @@ angular.module('myApp', [ 'ngSanitize', 'ui.router',  'firebase'  ])
     })
 
     .state('practice', {
-      url: '/languages/:language/:level',
+      url: '/languages/:language/practice/:level',
       templateUrl: 'templates/practice.html',
       controller: 'PracticeController'
     })

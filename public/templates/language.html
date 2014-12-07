@@ -7,11 +7,12 @@
         <div ng-repeat="items in levelsSplitArray" class="row levels-row">
             <div class="{{getContainerClass(items.length)}}">
                 <div ng-repeat="item in items" class="{{getClass(items.length)}}">
-                    <a ng-href="#/languages/practice/{{item}}">
+                    <a ng-href="#/languages/{{language}}/practice/{{item}}">
                         <div class="level-box">
-                            <span class="level-label">{{item}}</span>
+                            <span class="level-index">{{item}}</span>
                         </div>
                     </a>
+                    <p class="level-title">{{levels[item-1].name}}</p>
                 </div>
             </div>
         </div>

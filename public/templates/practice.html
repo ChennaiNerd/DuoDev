@@ -1,1 +1,25 @@
-<h1>Level {{level}}</h1>
+<div class="practice-section">
+    <div class="container">
+        <div class="pull-right">
+            <span class="badge badge-primary">{{selectionIndex}} / {{questionsCount}}</span>
+        </div>
+        <h1 class="heading no-bottom-margin">{{level.name}}</h1>
+        <p class="subtitle"><a href="#/languages/{{language}}">{{language}} Level</a> - {{levelIndex}}</p>
+        <br>
+
+        <div ng-repeat="item in level.questions" ng-if="selectionIndex === $index">
+            <div class="question">
+                <p class="lead">{{item.question}}</p>
+
+            </div>
+            <div class="action-footer">
+                <button class="btn btn-success btn-lg" ng-click="check($index)">
+                   <i class="icon ion-checkmark-circled"></i> Check
+                </button>
+                &nbsp; &nbsp;
+                <button class="btn btn-success btn-lg" ng-click="continue($index)">Continue</button>
+            </div>
+        </div>
+    </div>
+
+</div>

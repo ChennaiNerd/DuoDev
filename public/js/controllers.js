@@ -80,9 +80,9 @@ angular.module('myApp')
     }
 
     $scope.language = $stateParams.language;
-    JSONService.getPictures($scope.language)
+    JSONService.getLevels($scope.language)
         .then(function(response) {
-            $scope.levels = response.data || [];;
+            $scope.levels = response.data;
             $scope.levelsCount = $scope.levels.length;
             $scope.levelsSplitArray = getFlattenArray($scope.levelsCount);
         }, function(error) {
@@ -93,8 +93,24 @@ angular.module('myApp')
 })
 
 .controller('PracticeController',
-        function($scope, $rootScope, $firebase, fbUrl) {
+        function($scope, $stateParams, $location, JSONService, $firebase, fbUrl, $window) {
 
-    $scope.language = $stateParams.level || 'Unknown';
+    $scope.selectionIndex = 0;
 
+    $scope.language = $stateParams.language;
+    $scope.levelIndex = $stateParams.level;
+    JSONService.getLevels($scope.language)
+        .then(function(response) {
+            var levels = response.data;
+            $scope.level = levels[$scope.levelIndex-1];
+            $scope.questionsCount = $scope.level.questions.length;
+        }, function(error) {
+            $window.alert('Language file does not exist!')
+            return $location.path('/');
+        }).finally(function () {
+        });
+
+    $scope.continue = function (index) {
+        $scope.selectionIndex = index;
+    }
 });
