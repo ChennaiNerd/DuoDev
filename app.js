@@ -26,6 +26,7 @@ var connectAssets = require('connect-assets');
  */
 
 var homeController = require('./controllers/home');
+var appController = require('./controllers/app');
 var userController = require('./controllers/user');
 var contactController = require('./controllers/contact');
 
@@ -91,11 +92,11 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-app.use(function(req, res, next) {
-  // CSRF protection.
-  if (_.contains(csrfExclude, req.path)) return next();
-  csrf(req, res, next);
-});
+// app.use(function(req, res, next) {
+//   // CSRF protection.
+//   if (_.contains(csrfExclude, req.path)) return next();
+//   csrf(req, res, next);
+// });
 app.use(function(req, res, next) {
   // Make user object available in templates.
   res.locals.user = req.user;
@@ -117,7 +118,8 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: week }));
  */
 
 app.get('/', homeController.index);
-app.get('/install', homeController.install);
+app.post('/', homeController.post);
+app.get('/app', appController.index);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);

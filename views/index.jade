@@ -16,7 +16,8 @@ html(ng-app="myApp", ng-init="operatorName = '#{operatorName}';")
     h1 DuoDev
     p.subtitle Learning X in Y levels
     .container
-      form.form-signup.form-inline(role='form', method='POST', action-="/signup")
+      include partials/flash
+      form.form-signup.form-inline(role='form', method='POST', action="/")
         .form-group
           input.form-control(type='text', name='name', id='name', autofocus=true, placeholder="Name", required)
         .form-group
