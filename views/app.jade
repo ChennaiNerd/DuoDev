@@ -9,16 +9,15 @@ html(ng-app="myApp")
     meta(name='author', content='')
     title #{title} | Learn X in Y levels
 
-    link(href='http://fonts.googleapis.com/css?family=Raleway', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700', rel='stylesheet', type='text/css')
     != css('styles')
     link(rel="stylesheet", type="text/css", href="/widget.css")
 
-  body(ng-controller="MainController")
+  body
     include partials/header
 
-    block content
+    div(ui-view='')
 
     include partials/footer
 

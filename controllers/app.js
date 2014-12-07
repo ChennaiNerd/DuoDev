@@ -31,7 +31,6 @@ exports.post = function (req, res) {
         expires: new Date(Date.now() + 365 * 2 * 24 * 60 * 60 * 1000)
       });
 
-      console.log(req.cookies.name);
         return res.redirect('/app');
     } else {
         req.flash('errors', { msg: 'Please enter name and email!' });

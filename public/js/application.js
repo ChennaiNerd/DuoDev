@@ -16,7 +16,7 @@
 //= require lib/jquery-2.1.1.min
 //= require lib/bootstrap.min
 //= require lib/angular.min
-//= require lib/angular-route.min
+//= require lib/angular-ui-router.min
 //= require lib/angular-sanitize.min
 //= require lib/firebase
 //= require lib/angularfire.min
