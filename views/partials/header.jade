@@ -12,13 +12,12 @@
       ul.nav.navbar-nav
       ul.nav.navbar-nav.navbar-right
         li(class=title=='Home'?'active':undefined)
-          a(href='/') #{name}
-        //-if !user
-          li(class='active')
-            if user.profile.picture
-              img.image-round(src='#{user.profile.picture}')
-            else
-              img.image-round(src='#{user.gravatar(60)}')
-            | #{user.profile.name || user.email || user.id}&nbsp;
-          li(class='active')
-            a(href='/signup') Create Account
+          p.navbar-text
+            if gravatar
+              img.image-round(src='#{gravatar}')
+            span #{name}
+        li
+          a(href='/logout')
+            span.ion-log-out
+            | Logout
+

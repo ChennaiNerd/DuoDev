@@ -1,3 +1,5 @@
+// Index page styles
+
 body {
   margin-bottom: 0;
   background-color: #f8f4f0;
@@ -8,9 +10,28 @@ body {
   background:         linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* W3C */
 }
 
-h1 {
+// Hero unit
+
+.hero-unit {
+  color: #fff;
+  padding: 40px 0 80px;
+  margin: -10px auto 0;
+  background: -webkit-linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* W3C */
+  text-align: center;
+
+  h1 {
     font-size: 56px;
+  }
+
+  .lead {
+    font-size: 20px;
+  }
 }
+
 
 .subtitle {
     font-size: 24px;
@@ -26,9 +47,16 @@ h1 {
     }
 }
 
+.video-section {
+    margin-top: 60px;
+}
+
 .btn-video {
     font-size: 18px;
     color: #f1c40f;
+    i {
+        margin-right: 5px;
+    }
 
     &:hover {
         color: #fff;

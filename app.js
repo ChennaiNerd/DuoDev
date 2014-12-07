@@ -13,10 +13,8 @@ var csrf = require('lusca').csrf();
 var methodOverride = require('method-override');
 
 var _ = require('lodash');
-var MongoStore = require('connect-mongo')({ session: session });
 var flash = require('express-flash');
 var path = require('path');
-var mongoose = require('mongoose');
 var passport = require('passport');
 var expressValidator = require('express-validator');
 var connectAssets = require('connect-assets');
@@ -25,9 +23,7 @@ var connectAssets = require('connect-assets');
  * Controllers (route handlers).
  */
 
-var homeController = require('./controllers/home');
 var appController = require('./controllers/app');
-var userController = require('./controllers/user');
 var contactController = require('./controllers/contact');
 
 /**
@@ -35,22 +31,13 @@ var contactController = require('./controllers/contact');
  */
 
 var secrets = require('./config/secrets');
-var passportConf = require('./config/passport');
+// var passportConf = require('./config/passport');
 
 /**
  * Create Express server.
  */
 
 var app = express();
-
-/**
- * Connect to MongoDB.
- */
-
-mongoose.connect(secrets.db);
-mongoose.connection.on('error', function() {
-  console.error('MongoDB Connection Error. Make sure MongoDB is running.');
-});
 
 var hour = 3600000;
 var day = hour * 24;
@@ -83,11 +70,7 @@ app.use(cookieParser());
 app.use(session({
   resave: true,
   saveUninitialized: true,
-  secret: secrets.sessionSecret,
-  store: new MongoStore({
-    url: secrets.db,
-    auto_reconnect: true
-  })
+  secret: secrets.sessionSecret
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -117,25 +100,12 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: week }));
  * Main routes.
  */
 
-app.get('/', homeController.index);
-app.post('/', homeController.post);
-app.get('/app', appController.index);
-app.get('/login', userController.getLogin);
-app.post('/login', userController.postLogin);
-app.get('/logout', userController.logout);
-app.get('/forgot', userController.getForgot);
-app.post('/forgot', userController.postForgot);
-app.get('/reset/:token', userController.getReset);
-app.post('/reset/:token', userController.postReset);
-app.get('/signup', userController.getSignup);
-app.post('/signup', userController.postSignup);
+app.get('/', appController.index);
+app.post('/', appController.post);
+app.get('/app', appController.app);
+app.get('/logout', appController.logout);
 app.get('/contact', contactController.getContact);
 app.post('/contact', contactController.postContact);
-app.get('/account', passportConf.isAuthenticated, userController.getAccount);
-app.post('/account/profile', passportConf.isAuthenticated, userController.postUpdateProfile);
-app.post('/account/password', passportConf.isAuthenticated, userController.postUpdatePassword);
-app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
-app.get('/account/unlink/:provider', passportConf.isAuthenticated, userController.getOauthUnlink);
 
 /**
  * 500 Error Handler.

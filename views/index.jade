@@ -7,28 +7,34 @@ html(ng-app="myApp", ng-init="operatorName = '#{operatorName}';")
     meta(name='description', content='')
     meta(name='csrf-token', content=_csrf)
     meta(name='author', content='')
-    title #{title} | DuoDev
+
+    link(href='http://fonts.googleapis.com/css?family=Raleway', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700', rel='stylesheet', type='text/css')
+    title #{title} | Learn X in Y levels
     != css('styles')
     != css('index')
-  body(ng-controller="MainController")
 
-  .hero-unit
-    h1 DuoDev
-    p.subtitle Learning X in Y levels
-    .container
-      include partials/flash
-      form.form-signup.form-inline(role='form', method='POST', action="/")
-        .form-group
-          input.form-control(type='text', name='name', id='name', autofocus=true, placeholder="Name", required)
-        .form-group
-          input.form-control(type='email', name='email', id='email', , placeholder="Email", required)
-        .form-group
-          button.btn.btn-success.btn-lg(type='submit')
-            span.ion-paper-airplane
-            | Start
-      .features
-        a.btn.btn-link.btn-video(href="") Watch demo video
+  body
+    .hero-unit
+      h1 DuoDev
+      p.subtitle Learning X in Y levels
+      .container
+        include partials/flash
+        form.form-signup.form-inline(role='form', method='POST', action="/")
+          .form-group
+            input.form-control(type='text', name='name', id='name', autofocus=true, placeholder="Name", required)
+          .form-group
+            input.form-control(type='email', name='email', id='email', , placeholder="Email", required)
+          .form-group
+            button.btn.btn-success.btn-lg(type='submit')
+              span.ion-paper-airplane
+              | Start
+        .video-section
+          a.btn.btn-link.btn-video(href="")
+            i.icon.ion-play
+            | Watch demo video
 
-    include partials/footer
+      include partials/footer
 
-    != js('application')
+      != js('application')

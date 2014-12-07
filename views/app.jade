@@ -7,11 +7,16 @@ html(ng-app="myApp")
     meta(name='description', content='')
     meta(name='csrf-token', content=_csrf)
     meta(name='author', content='')
-    title #{title} | DuoDev
+    title #{title} | Learn X in Y levels
+
+    link(href='http://fonts.googleapis.com/css?family=Raleway', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700', rel='stylesheet', type='text/css')
     != css('styles')
     link(rel="stylesheet", type="text/css", href="/widget.css")
+
   body(ng-controller="MainController")
-    include partials/navbar
+    include partials/header
 
     block content
 
