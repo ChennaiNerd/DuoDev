@@ -39,9 +39,10 @@ exports.post = function (req, res) {
 }
 
 var getGravatar = function(email, size) {
+
   if (!size) size = 200;
 
-  if (!this.email) {
+  if (!email) {
     return 'https://gravatar.com/avatar/?s=' + size + '&d=retro';
   }
 
