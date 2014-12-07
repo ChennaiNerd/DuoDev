@@ -40,8 +40,20 @@
             {"type": "blank", "question": "What is the statement used to jump back to the beginning of the loop", "answer": "continue"},
 
           ]
-        }
+        },
 
+        {
+          "name": "Functions",
+          "id": "1004",
+          "questions": [
+            {"type": "blank", "question":"What is the return type of the function which does not return any value", "answer":"void"},
+            {"type": "choice", "question":"How to return two values from a function?", "choices":["return a, b;", "return (a,b);", "return [a,b];", "Not possible to return two values."], "answer":"Not possible to return two values."},
+            {"type": "blank", "question": "Say true or false.  Functions can return even a structure.", "answer": "true"},
+            {"type": "choice", "question": "What is the syntax for function declaration?", "choices":["<return type> <function name>(<args>)", "<args> <function name>(<return type>)", "def <function name> (<args>)", "function <function name> (<args>, <return type>)"], "answer": "<return type> <function name>(<args>)"},
+            {"type": "choice", "question": "What is the signature of the function pointer which returns an int pointer and takes a char pointer as argument?", "choices": ["int (*fp)(char *)", "char * (*fp)(int *)", "int * (*fp)(char *)", "*fp (int *)(char *)"], "answer": "int * (*fp)(char *)"},
+
+          ]
+      }
       ],
   "Python":[],
   "JavaScript":[]
