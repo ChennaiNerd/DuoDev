@@ -20,4 +20,5 @@
 //= require lib/angular-sanitize.min
 //= require lib/firebase
 //= require lib/angularfire.min
+//= require lib/randomColor
 //= require main
