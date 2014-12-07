@@ -1,12 +1,13 @@
 <div class="practice-section">
     <div class="container">
         <div class="pull-right">
-            <span class="badge badge-primary">{{selectionIndex}} / {{questionsCount}}</span>
+            <span class="badge badge-primary">{{selectionIndex + 1 }} / {{questionsCount}}</span>
         </div>
         <h1 class="heading no-bottom-margin">{{level.name}}</h1>
-        <p class="subtitle"><a href="#/languages/{{language}}">{{language}} </a> - Level {{levelIndex}}</p>
+        <p class="subtitle"><a href="#/languages/{{language}}">{{language}} </a> - Level {{levelIndex}} / {{levelsCount}}</p>
         <br>
 
+        <div ng-if="!completed">
         <div ng-repeat="item in level.questions" ng-if="selectionIndex === $index">
             <div class="question">
                 <p class="lead">{{item.question}}</p>
@@ -24,18 +25,47 @@
                 </div>
             </div>
             <div class="action-footer">
+                <p ng-if="!correct && !wrong">
+                    <a class="pull-right btn btn-link text-warning" ng-click="showHelp()" ng-if="!help">
+                       <i class="icon ion-help-buoy"></i> Help
+                    </a>
+                    <span class="pull-right text-alert text-warning animated bounceIn" ng-if="help">
+                        <i class="icon ion-help-buoy"></i>
+                        Correct solution: <span class="text-success">{{item.answer}}</span>
+                    </span>
+                </p>
+
                 <button class="btn btn-success btn-lg" ng-click="check(item, anwser)" ng-if="!correct">
-                   <i class="icon ion-checkmark-circled"></i> Check
+                   Check
                 </button>
-                &nbsp; &nbsp;
                 <button class="btn btn-success btn-lg" ng-click="continue( $index + 1 )" ng-if="correct">Continue</button>
-                <span class="text-success" ng-if="correct">
-                    You are correct
+
+                <span class="pull-right text-alert text-success animated bounceIn" ng-if="correct">
+                    <i class="icon ion-checkmark-circled"></i> You are correct!
                 </span>
-                <span class="text-danger" ng-if="wrong">
-                    Correct solution: {{item.answer}}
+                <span class="pull-right text-alert text-danger animated bounceIn" ng-if="wrong">
+                    <i class="icon ion-close-circled"></i> Wrong!
+                    <br>
+                    Correct solution: <span class="text-success">{{item.answer}}</span>
                 </span>
             </div>
+        </div>
+        </div>
+
+        <div ng-if="completed">
+            <p class="lead text-success" ng-if="madeIt">
+                You are Great. You have learned {{language}}.
+                <br>
+                <br>
+                <a href="#/" class="btn btn-primary">Learn some other language</a>
+            </p>
+
+            <p class="lead text-success" ng-if="!madeIt">
+                Awesome! You are completed Level {{levelIndex}}
+                <br>
+                <br>
+                 <a href="#/languages/{{language}}/practice/{{nextLevel}}" class="btn btn-primary" ng-if="!madeIt">Go to Next Level</a>
+            </p>
         </div>
     </div>
 

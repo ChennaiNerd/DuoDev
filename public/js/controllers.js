@@ -98,15 +98,17 @@ angular.module('myApp')
     $scope.selectionIndex = 0;
     $scope.correct = false;
     $scope.wrong = false;
+    $scope.help = false;
     $scope.answer = {
         value : null
     };
 
     $scope.language = $stateParams.language;
-    $scope.levelIndex = $stateParams.level;
+    $scope.levelIndex = +($stateParams.level);
     JSONService.getLevels($scope.language)
         .then(function(response) {
             var levels = response.data;
+            $scope.levelsCount = levels.length;
             $scope.level = levels[$scope.levelIndex-1];
             $scope.questionsCount = $scope.level.questions.length;
         }, function(error) {
@@ -114,6 +116,10 @@ angular.module('myApp')
             return $location.path('/');
         }).finally(function () {
         });
+
+    $scope.showHelp = function () {
+        $scope.help = true;
+    }
 
     $scope.check = function (item) {
         if (item.answer === $scope.answer.value) {
@@ -123,6 +129,9 @@ angular.module('myApp')
             $scope.correct = false;
             $scope.wrong = true;
         }
+
+        $scope.help = false;
+        $scope.hideHelp = true;
     }
 
     $scope.continue = function (index) {
@@ -130,5 +139,15 @@ angular.module('myApp')
         $scope.answer.value = null;
         $scope.correct = false;
         $scope.wrong = false;
+
+        if (index === $scope.questionsCount) {
+            $scope.nextLevel = $scope.levelIndex + 1;
+            $scope.selectionIndex = 0;
+            $scope.completed = true;
+        }
+
+        if ($scope.levelIndex === $scope.levelsCount) {
+            $scope.madeIt = true;
+        }
     }
 });
