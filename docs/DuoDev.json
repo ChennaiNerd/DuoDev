@@ -9,6 +9,9 @@
             {"type": "choice", "question":"Which is one of the way to declare a string constant?", "choices":["char foo[] = \"foo\"", "String foo = \"foo\"", "chars foo = \"foo\"", "char foo=\"foo\""], "answer":"char foo[] = \"foo\""},
             {"type": "blank", "question": "Name the data type to hold floating point(32-bit) numbers", "answer": "float"},
             {"type": "blank", "question": "What is the qualifier used for representing only non-negative numbers?", "answer":"unsigned"},
+            {"type": "choice", "question": "Which storage class instructs the compiler to keep a local variable in existence during the life-time of the program instead of creating and destroying it each time it comes into and goes out of scope.", "choices": ["auto", "extern", "static", "register"], "answer": "static"},
+            {"type": "choice", "question": "Which storage class is the default storage class for all local variables.", "choices": ["auto", "extern", "static", "register"], "answer": "auto"},
+            {"type": "choice", "question": "___ allows you to combine data items of different kinds.", "choices": ["union", "struct", "enum", "typedef"], "answer": "struct"}
 
           ]
         },
@@ -38,7 +41,7 @@
             {"type": "choice", "question": "for (i = 0; i = 5; i++) { printf(\"%d\", i);} How many times will the statement inside the loop get executed?", "choices" : ["5", "1", "6", "infinite"], "answer": "infinite"},
             {"type": "blank", "question": "What is the statement used to jump out of a loop", "answer": "break"},
             {"type": "blank", "question": "What is the statement used to jump back to the beginning of the loop", "answer": "continue"},
-
+            {"type": "blank", "question": "Say true or false.  default label in switch statement will be executed atleast once even if the condition in matches or not.", "answer": "false"}
           ]
         },
 
