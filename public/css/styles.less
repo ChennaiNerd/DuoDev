@@ -1,0 +1,254 @@
+@import "lib/bootstrap/bootstrap";
+@import "lib/font-awesome/font-awesome";
+@import "lib/ionicons/ionicons";
+@import "lib/bootstrap-social";
+@import "themes/modern";
+
+// Scaffolding
+// -------------------------
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 60px;
+  margin-bottom: 75px;
+  background-color: #f8f4f0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+
+  p,
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+// Navbar
+// -------------------------
+
+.navbar-nav img {
+  width: 30px;
+  height: 30px;
+  margin: -15px 15px -15px;
+}
+
+.navbar-default {
+    background-color: #333; // #ecf0f1 !important;
+    // background-color: #6EC17C;
+    // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6EC17C), color-stop(100%, #56B76E));
+    // background: -webkit-linear-gradient(top, #6EC17C, #56B76E);
+    // background: -moz-linear-gradient(top, #6ec17c, #56b76e);
+    // background: -ms-linear-gradient(top, #6ec17c, #56b76e);
+    // background: -o-linear-gradient(top, #6ec17c, #56b76e);
+    // background: linear-gradient(to bottom, #6EC17C, #56B76E);
+    // -webkit-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
+    // -o-user-select: none;
+    // user-select: none;
+    // overflow: visible;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-size: 16px;
+    color: #fff !important;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #2ac5ee !important;
+}
+
+
+.navbar-brand {
+    font-size: 22px !important;
+    color: #ffee64 !important;
+}
+
+// Alerts
+// -------------------------
+
+.alert {
+  margin-top: 20px;
+}
+
+// Hero unit
+
+.hero-unit {
+  color: #fff;
+  padding: 120px 0 150px;
+  margin: -10px auto 0;
+  background: -webkit-linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #5f2c82 10%, #49a09d 90%); /* W3C */
+  text-align: center;
+
+  .lead {
+    font-size: 20px;
+  }
+}
+
+
+// Features
+// -------------------------
+
+.features {
+    padding: 30px 0;
+    border-radius: 0;
+
+    .subheading {
+        font-weight: 200;
+    }
+
+    h4 {
+        text-align: center;
+    }
+}
+
+.features [class^='ion-'],
+.socail-icons {
+    text-align: center;
+    font-size: 44px;
+    margin: 0 auto;
+    display: block;
+    color: #0b62ef;
+}
+
+.ion-social-android,
+.ion-social-apple {
+    display: inline-block !important;
+    text-align: center;
+    margin-left: 10px !important;
+}
+
+// Font Icons
+// -------------------------
+
+.fa,
+[class^='ion-'] {
+  margin-right: 6px;
+}
+
+.form-control {
+  border-color: #bbb !important;
+}
+
+.image-round {
+    border-radius:50%;
+}
+
+.install-section  {
+    max-width: 600px;
+    margin:30px auto 0;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fbf3d7;
+
+    .code {
+        margin-top: 20px;
+        font-size:12px;
+    }
+}
+.page-header {
+    border-bottom: 1px solid #dedede;
+}
+
+.heading {
+    font-size: 22px;
+}
+
+.subheading {
+    fonti-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.chat-section {
+    margin-top: 20px;
+}
+
+.panel-default {
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.panel-heading {
+    color: #fff !important;
+    background-color: #4f8ef7 !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.panel-left {
+    min-height: 290px;
+}
+.panel-right {
+    min-height: 600px;
+}
+
+.panel-body-left {
+    padding: 0 !important;
+}
+.panel-body-right {
+    padding-top: 0 !important;
+}
+
+.list-chat {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-chat-item a {
+    display: block;
+    padding: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #efefef;
+    background-color: #fafafa;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: #f5f8fa;
+    }
+}
+
+.client-name,
+.operator-name {
+    display: block;
+    color: #454545;
+}
+
+.client-email,
+.operator-email {
+    font-size: 13px;
+}
+
+.active-icon {
+    color: #27ae60;
+    display: inline;
+}
+
+.customer-information {
+    padding: 30px 10px 20px;
+    border-left: 1px solid #ebebeb;
+    min-height: 600px;
+}
+
+// Angular click anchor element
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}
