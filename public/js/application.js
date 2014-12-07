@@ -22,3 +22,5 @@
 //= require lib/angularfire.min
 //= require lib/randomColor
 //= require main
+//= require controllers
+//= require services

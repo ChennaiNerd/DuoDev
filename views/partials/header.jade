@@ -10,9 +10,11 @@
         img.img-32(src="/img/logo-white.png", alt="")
         |  DuoDev
     .collapse.navbar-collapse
-      ul.nav.navbar-nav
       ul.nav.navbar-nav.navbar-right
-        li(class=title=='Home'?'active':undefined)
+        li
+          a(href='/')
+            | Languages
+        li
           p.navbar-text
             if gravatar
               img.image-round(src='#{gravatar}')

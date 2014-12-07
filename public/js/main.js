@@ -15,15 +15,15 @@ angular.module('myApp', [ 'ngSanitize', 'ui.router',  'firebase'  ])
     })
 
     .state('language', {
-      url: '/languages/:langauge',
+      url: '/languages/:language',
       templateUrl: 'templates/language.html',
       controller: 'LanguageController'
     })
 
-    .state('languages.level', {
+    .state('language.practice', {
       url: '/:level',
-      templateUrl: 'templates/level.html',
-      controller: 'LevelController'
+      templateUrl: 'templates/practice.html',
+      controller: 'PracticeController'
     })
 
     // if none of the above states are matched, use this as the fallback
