@@ -1,202 +1,230 @@
-[{
-      "name": "Declaration and commenting",
-      "id": "1001",
-      "questions": [
-        {
-          "type": "choice",
-          "question": "How to declare a variable to hold an integer value?",
-          "choices": [
-            "var a;",
-            "int a;",
-            "a = 0",
-            "num a;"
-          ],
-          "answer": "var a;"
-        },
-        {
-          "type": "blank",
-          "question": "How to comment a single line?",
-          "answer": "//"
-        },
-        {
-          "type": "choice",
-          "question": "How to do a multi-line comment?",
-          "choices": [
-            "<!-- -->",
-            "/* */",
-            "#",
-            "//"
-          ],
-          "answer": "/* */"
-        },
-        {
-          "type": "choice",
-          "question": "Which is one of the way to declare a string constant?",
-          "choices": [
-            "char foo[] = \"foo\"",
-            "String foo = \"foo\"",
-            "chars foo = \"foo\"",
-            "var foo=\"foo\""
-          ],
-          "answer": "var foo=\"foo\""
-        }
-      ]
-    },
-    {
-      "name": "Operators",
-      "id": "1002",
-      "questions": [
-        {
-          "type": "choice",
-          "question": "Which is bitwise OR operator?",
-          "choices": [
-            "or",
-            "xor",
-            "|",
-            "^"
-          ],
-          "answer": "|"
-        },
-        {
-          "type": "blank",
-          "question": "What is in bitwise AND operator in JavaScript?",
-          "answer": "&"
-        },
-        {
-          "type": "blank",
-          "question": "__ inverts the bits of its operand?",
-          "answer": "~"
-        },
-        {
-          "type": "choice",
-          "question": "Which is conditional ternary operator",
-          "choices": [
-            ">>",
-            "?:",
-            "<<",
-            "??"
-          ],
-          "answer": "?:"
-        },
-        {
-          "type": "choice",
-          "question": "Is there a way to increment and assign a value in a single statement?  If so, what is the operator?",
-          "choices": [
-            "No such operator",
-            "+=",
-            "=+",
-            "&="
-          ],
-          "answer": "+="
-        },
-        {
-          "type": "choice",
-          "question": "How to multiply two numbers in JavaScript, say x, y are the numbers?",
-          "choices": [
-            "x . y",
-            "x mul y",
-            "x * y",
-            "x ** y"
-          ],
-          "answer": "x * y"
-        }
-      ]
-    },
-    {
-      "name": "Conditions and Loops",
-      "id": "1003",
-      "questions": [
-        {
-          "type": "choice",
-          "question": "Which is basic conditional branching statement in Python?",
-          "choices": [
-            "check",
-            "is",
-            "if",
-            "yes"
-          ],
-          "answer": "if"
-        },
-        {
-          "type": "choice",
-          "question": "What is the syntax for FOR loop?",
-          "choices": [
-            "for ( variable initialization; condition; variable update )",
-            "for ( condition; variable update ; exit status)",
-            "for item in sequence",
-            "for ( variable increment ; variable decrement; condition )"
-          ],
-          "answer": "for ( variable initialization; condition; variable update )"
-        },
-        {
-          "type": "choice",
-          "question": "Which looping makes sure loop is executed atleast once?",
-          "choices": [
-            "for",
-            "while",
-            "do..while",
-            "None"
-          ],
-          "answer": "do..while"
-        },
-        {
-          "type": "choice",
-          "question": "for (i = 0; i = 5; i++) { <statement>;} How many times will the statement inside the loop get executed?",
-          "choices": [
-            "5",
-            "1",
-            "6",
-            "infinite"
-          ],
-          "answer": "infinite"
-        },
-        {
-          "type": "blank",
-          "question": "What is the statement used to jump out of a loop",
-          "answer": "break"
-        },
-        {
-          "type": "blank",
-          "question": "What is the statement used to jump back to the beginning of the loop",
-          "answer": "continue"
-        },
-        {
-          "type": "blank",
-          "question": "Say true or false.  default label in switch statement will be executed atleast once even if the condition in matches or not.",
-          "answer": "false"
-        }
-      ]
-    },
-    {
-      "name": "Functions",
-      "id": "1004",
-      "questions": [
-        {
-          "type": "blank",
-          "question": "What will be the default return value if the function does not have any return statement?",
-          "answer": "undefined"
-        },
-        {
-          "type": "choice",
-          "question": "How to return two values from a function?",
-          "choices": [
-            "return a, b;",
-            "return (a,b);",
-            "return a:b;",
-            "Not possible to return two values."
-          ],
-          "answer": "Not possible to return two values."
-        },
-        {
-          "type": "choice",
-          "question": "What is the syntax for function declaration?",
-          "choices": [
-            "<return type> <function name>(<args>)",
-            "<args> <function name>(<return type>)",
-            "def <function name> (<args>)",
-            "function <function name> (<args>)"
-          ],
-          "answer": "function <function name> (<args>)"
-        }
-      ]
-    }]
+[
+  {
+    "name": "Declaration and commenting",
+    "id": "1001",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "How to declare a variable to hold an integer value?",
+        "choices": [
+          "var a;",
+          "int a;",
+          "a = 0",
+          "num a;"
+        ],
+        "answer": "var a;"
+      },
+      {
+        "type": "blank",
+        "question": "How to comment a single line?",
+        "answer": "//"
+      },
+      {
+        "type": "choice",
+        "question": "How to do a multi-line comment?",
+        "choices": [
+          "<!-- -->",
+          "/* */",
+          "#",
+          "//"
+        ],
+        "answer": "/* */"
+      },
+      {
+        "type": "choice",
+        "question": "Which is one of the way to declare a string constant?",
+        "choices": [
+          "char foo[] = \"foo\"",
+          "String foo = \"foo\"",
+          "chars foo = \"foo\"",
+          "var foo=\"foo\""
+        ],
+        "answer": "var foo=\"foo\""
+      },
+      {
+        "type": "blank",
+        "question": "___ is ordered list of values, of any type.",
+        "answer": "array"
+      },
+      {
+        "type": "choice",
+        "question": "Which is one of the way to create object with key \"mykey\" and value 555?",
+        "choices": [
+          "var obj = ('mykey': 555)",
+          "var obj = {'mykey'=555}",
+          "var obj = ('mykey'=555)",
+          "var obj = {'mykey': 555}"
+        ],
+        "answer": ""
+      }
+    ]
+  },
+  {
+    "name": "Operators",
+    "id": "1002",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "Which is bitwise OR operator?",
+        "choices": [
+          "or",
+          "xor",
+          "|",
+          "^"
+        ],
+        "answer": "|"
+      },
+      {
+        "type": "blank",
+        "question": "What will be the result of the following comparision (\"5\" == 5)",
+        "answer": "true"
+      },
+      {
+        "type": "blank",
+        "question": "What will be the result of the following comparision (\"5\" === 5)",
+        "answer": "true"
+      },
+      {
+        "type": "blank",
+        "question": "What is in bitwise AND operator in JavaScript?",
+        "answer": "&"
+      },
+      {
+        "type": "blank",
+        "question": "__ inverts the bits of its operand?",
+        "answer": "~"
+      },
+      {
+        "type": "choice",
+        "question": "Which is conditional ternary operator",
+        "choices": [
+          ">>",
+          "?:",
+          "<<",
+          "??"
+        ],
+        "answer": "?:"
+      },
+      {
+        "type": "choice",
+        "question": "Is there a way to increment and assign a value in a single statement?  If so, what is the operator?",
+        "choices": [
+          "No such operator",
+          "+=",
+          "=+",
+          "&="
+        ],
+        "answer": "+="
+      },
+      {
+        "type": "choice",
+        "question": "How to multiply two numbers in JavaScript, say x, y are the numbers?",
+        "choices": [
+          "x . y",
+          "x mul y",
+          "x * y",
+          "x ** y"
+        ],
+        "answer": "x * y"
+      }
+    ]
+  },
+  {
+    "name": "Conditions and Loops",
+    "id": "1003",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "Which is basic conditional branching statement in Python?",
+        "choices": [
+          "check",
+          "is",
+          "if",
+          "yes"
+        ],
+        "answer": "if"
+      },
+      {
+        "type": "choice",
+        "question": "What is the syntax for FOR loop?",
+        "choices": [
+          "for ( variable initialization; condition; variable update )",
+          "for ( condition; variable update ; exit status)",
+          "for item in sequence",
+          "for ( variable increment ; variable decrement; condition )"
+        ],
+        "answer": "for ( variable initialization; condition; variable update )"
+      },
+      {
+        "type": "choice",
+        "question": "Which looping makes sure loop is executed atleast once?",
+        "choices": [
+          "for",
+          "while",
+          "do..while",
+          "None"
+        ],
+        "answer": "do..while"
+      },
+      {
+        "type": "choice",
+        "question": "for (i = 0; i = 5; i++) { <statement>;} How many times will the statement inside the loop get executed?",
+        "choices": [
+          "5",
+          "1",
+          "6",
+          "infinite"
+        ],
+        "answer": "infinite"
+      },
+      {
+        "type": "blank",
+        "question": "What is the statement used to jump out of a loop",
+        "answer": "break"
+      },
+      {
+        "type": "blank",
+        "question": "What is the statement used to jump back to the beginning of the loop",
+        "answer": "continue"
+      },
+      {
+        "type": "blank",
+        "question": "Say true or false.  default label in switch statement will be executed atleast once even if the condition in matches or not.",
+        "answer": "false"
+      }
+    ]
+  },
+  {
+    "name": "Functions",
+    "id": "1004",
+    "questions": [
+      {
+        "type": "blank",
+        "question": "What will be the default return value if the function does not have any return statement?",
+        "answer": "undefined"
+      },
+      {
+        "type": "choice",
+        "question": "How to return two values from a function?",
+        "choices": [
+          "return a, b;",
+          "return (a,b);",
+          "return a:b;",
+          "Not possible to return two values."
+        ],
+        "answer": "Not possible to return two values."
+      },
+      {
+        "type": "choice",
+        "question": "What is the syntax for function declaration?",
+        "choices": [
+          "<return type> <function name>(<args>)",
+          "<args> <function name>(<return type>)",
+          "def <function name> (<args>)",
+          "function <function name> (<args>)"
+        ],
+        "answer": "function <function name> (<args>)"
+      }
+    ]
+  }
+]
