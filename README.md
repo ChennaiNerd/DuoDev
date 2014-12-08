@@ -1,6 +1,8 @@
 ## DuoDev
 
-Learning X in Y levels
+Learning X in Y levels.
+
+[Go Here](http://ufkk04cc7eb6.fizerkhan.koding.io)
 
 ### Description
 
@@ -14,4 +16,13 @@ We love it and ofcourse its design. We have idea of Duolingo for
 computer language(only for syntax). That idea becomes [DuoDev](http://ufkk04cc7eb6.fizerkhan.koding.io/)
 
 
+### Screenshots
+
+Here provide couple screenshots of your project.
+
+![image][http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-1.json]
+![image][http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-2.json]
+![image][http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-3.json]
+![image][http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-4.json]
+![image][http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-5.json]
 
