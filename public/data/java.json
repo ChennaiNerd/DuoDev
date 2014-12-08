@@ -101,7 +101,7 @@
         "answer": "?:"
       },
       {
-        "type": "blank",
+        "type": "choice",
         "question": "Is there a way to increment and assign a value in a single statement?  If so, what is the operator?",
         "choices": [
           "No such operator",

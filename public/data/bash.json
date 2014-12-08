@@ -1,0 +1,187 @@
+[
+  {
+    "name": "Declaration and commenting",
+    "id": "1001",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "How to declare a variable to hold an integer value?",
+        "choices": [
+          "var a=0",
+          "int a=0",
+          "a=0",
+          "num a=0"
+        ],
+        "answer": "a=0"
+      },
+      {
+        "type": "blank",
+        "question": "How to comment a single line?",
+        "answer": "#"
+      },
+      {
+        "type": "choice",
+        "question": "Which is one of the way to declare a string constant?",
+        "choices": [
+          "char foo[] = \"foo\"",
+          "String foo = \"foo\"",
+          "foo=\"foo\"",
+          "char foo=\"foo\""
+        ],
+        "answer": "foo=\"foo\""
+      },
+      {
+        "type": "choice",
+        "question": "If NAME is the variable, which is one of the way to print its contents?",
+        "choices": [
+          "NAME",
+          "$NAME",
+          "(NAME)",
+          "*(NAME)"
+        ],
+        "answer": "$NAME"
+      }
+    ]
+  },
+  {
+    "name": "Operators",
+    "id": "1002",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "Which is conditional OR operator?",
+        "choices": [
+          "or",
+          "|",
+          "||",
+          "$or"
+        ],
+        "answer": "||"
+      },
+      {
+        "type": "blank",
+        "question": "___ is conditional AND operator in Bash?",
+        "answer": "&&"
+      },
+      {
+        "type": "blank",
+        "question": "___ is the operator to test two integers are not algebraically equal?",
+        "answer": "-ne"
+      },
+      {
+        "type": "choice",
+        "question": "___ symbol is used to append output of a command to a file",
+        "choices": [
+          "No such operator",
+          ">",
+          ">>",
+          "|"
+        ],
+        "answer": ">>"
+      },
+      {
+        "type": "choice",
+        "question": "___ symbol is used to start a process in the background",
+        "choices": [
+          "%",
+          ">",
+          ">>",
+          "&"
+        ],
+        "answer": "&"
+      }
+    ]
+  },
+  {
+    "name": "Conditions and Loops",
+    "id": "1003",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "Which is basic conditional branching statement in Bash?",
+        "choices": [
+          "check",
+          "is",
+          "if",
+          "yes"
+        ],
+        "answer": "if"
+      },
+      {
+        "type": "choice",
+        "question": "Which is one of the syntax for FOR loop?",
+        "choices": [
+          "for (( variable initialization; condition; variable update ))",
+          "for (( condition; variable update ; exit status))",
+          "for ((condition 1; condition 2; condition 3))",
+          "for (( variable increment ; variable decrement; condition ))"
+        ],
+        "answer": "for (( variable initialization; condition; variable update ))"
+      },
+      {
+        "type": "choice",
+        "question": "for ((a=1; a=3; a++)); do <statement>; done; How many times will the statement inside the loop get executed?",
+        "choices": [
+          "5",
+          "1",
+          "6",
+          "infinite"
+        ],
+        "answer": "infinite"
+      },
+      {
+        "type": "blank",
+        "question": "What is the statement used to jump out of a loop",
+        "answer": "break"
+      },
+      {
+        "type": "blank",
+        "question": "Say true or false.  Statements in *) will be executed in case statement when none of the other pattern matches.",
+        "answer": "true"
+      }
+    ]
+  },
+  {
+    "name": "Functions",
+    "id": "1004",
+    "questions": [
+      {
+        "type": "blank",
+        "question": "What is the command to get input from the user",
+        "answer": "read"
+      },
+      {
+        "type": "blank",
+        "question": "If NAME is the variable, how to get only its first 7 characters in Bash?",
+        "answer": "${NAME:0:7}"
+      },
+      {
+        "type": "blank",
+        "question": "If NAME is the variable, how to create a new string replacing all occurence of \"a\" with \"o\" in Bash  ?",
+        "answer": "${VARIABLE/a/o}"
+      },
+      {
+        "type": "choice",
+        "question": "Which is one of the syntax for function declaration?",
+        "choices": [
+          "<return type> <function name>(<args>)",
+          "<args> <function name>(<return type>)",
+          "def <function name> (<args>)",
+          "function <function name> ()"
+        ],
+        "answer": "function <function name> ()"
+      },
+      {
+        "type": "choice",
+        "question": "If foo is the function, how to call foo with 1 as argument?",
+        "choices": [
+          "foo 1",
+          "foo(1)",
+          "foo(&1)",
+          "call foo 1"
+        ],
+        "answer": "foo 1"
+      }
+    ]
+  }
+]
