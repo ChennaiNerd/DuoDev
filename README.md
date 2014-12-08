@@ -20,9 +20,9 @@ computer language(only for syntax). That idea becomes [DuoDev](http://ufkk04cc7e
 
 Here provide couple screenshots of your project.
 
-![image][http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-1.json]
-![image][http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-2.json]
-![image][http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-3.json]
-![image][http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-4.json]
-![image][http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-5.json]
+![image](http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-1.png)
+![image](http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-2.png)
+![image](http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-3.png)
+![image](http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-4.png)
+![image](http://ufkk04cc7eb6.fizerkhan.koding.io/img/DuoDev-5.png)
 
