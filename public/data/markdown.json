@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Styles",
+    "id": "1001",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "How to HTML element <h1>",
+        "choices": [
+          "#",
+          "*",
+          "^",
+          "+"
+        ],
+        "answer": "#"
+      },
+      {
+        "type": "blank",
+        "question": "Say true or false. *inner text* -> this will make inner text to be in italics.",
+        "answer": "true"
+      },
+      {
+        "type": "choice",
+        "question": "___ is used to render a text with strikethrough.",
+        "choices": [
+          "~ ~",
+          "/* */",
+          "~~ ~~",
+          "//"
+        ],
+        "answer": "~~ ~~"
+      },
+      {
+        "type": "choice",
+        "question": "___ is used to render a text in bold.",
+        "choices": [
+          "* *",
+          "/* */",
+          "** **",
+          "//"
+        ],
+        "answer": "** **"
+      }
+    ]
+  },
+  {
+    "name": "Lists",
+    "id": "1002",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "Which of the following will result in ordered list item",
+        "choices": [
+          "[1] Item",
+          "1. Item",
+          "1) Item",
+          "(1) Item"
+        ],
+        "answer": "1. Item"
+      },
+      {
+        "type": "blank",
+        "question": "Say true or false. Unordered lists can be made using asterisks, pluses, or hyphen.",
+        "answer": "true"
+      }
+    ]
+  },
+  {
+    "name": "Misc",
+    "id": "1003",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "Which is one of the method create links in markdown?",
+        "choices": [
+          "{http://testwebsite.com/}(http://testwebsite.com/)",
+          "[http://testwebsite.com/](http://testwebsite.com/)",
+          ">http://testwebsite.com/<(http://testwebsite.com/)",
+          "|http://testwebsite.com/|(http://testwebsite.com/)"
+        ],
+        "answer": "[http://testwebsite.com/](http://testwebsite.com/)"
+      }
+    ]
+  },
+  {
+    "name": "Graphics",
+    "id": "1004",
+    "questions": [
+      {
+        "type": "blank",
+        "question": "Say true or false. Horizontal rules are easily added with three or more asterisks or hyphens, with or without spaces.",
+        "answer": "true"
+      },
+      {
+        "type": "choice",
+        "question": "Which of the following is a way to display an image?",
+        "choices": [
+          "[This is the alt-attribute for my image](http://imgur.com/myimage.jpg \"An optional title\")",
+          "![This is the alt-attribute for my image](http://imgur.com/myimage.jpg \"An optional title\")",
+          "*[This is the alt-attribute for my image](http://imgur.com/myimage.jpg \"An optional title\")",
+          "None"
+        ],
+        "answer": "![This is the alt-attribute for my image](http://imgur.com/myimage.jpg \"An optional title\")"
+      }
+    ]
+  }
+]
