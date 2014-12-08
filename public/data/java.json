@@ -1,0 +1,207 @@
+[{
+      "name": "Declaration and commenting",
+      "id": "1001",
+      "questions": [
+        {
+          "type": "choice",
+          "question": "How to declare a variable to hold an integer value?",
+          "choices": [
+            "var a;",
+            "int a;",
+            "a = 0",
+            "num a;"
+          ],
+          "answer": "int a;"
+        },
+        {
+          "type": "blank",
+          "question": "How to comment a single line?",
+          "answer": "//"
+        },
+        {
+          "type": "choice",
+          "question": "How to do a multi-line comment?",
+          "choices": [
+            "<!-- -->",
+            "/* */",
+            "#",
+            "//"
+          ],
+          "answer": "/* */"
+        },
+        {
+          "type": "choice",
+          "question": "Which is one of the way to declare a string?",
+          "choices": [
+            "char foo[] = \"foo\"",
+            "String foo = \"foo\"",
+            "chars foo = \"foo\"",
+            "char foo=\"foo\""
+          ],
+          "answer": "String foo = \"foo\""
+        },
+        {
+          "type": "blank",
+          "question": "Name the data type to hold floating point(32-bit) numbers",
+          "answer": "float"
+        },
+        {
+          "type": "blank",
+          "question": "Say true or false.  Java has no unsigned types.",
+          "answer": "true"
+        }
+      ]
+    },
+    {
+      "name": "Operators",
+      "id": "1002",
+      "questions": [
+        {
+          "type": "choice",
+          "question": "Which is bitwise OR operator?",
+          "choices": [
+            "or",
+            "xor",
+            "|",
+            "^"
+          ],
+          "answer": "|"
+        },
+        {
+          "type": "blank",
+          "question": "___ is bitwise AND operator in Java?",
+          "answer": "&"
+        },
+        {
+          "type": "blank",
+          "question": "___ is the bitwise operator used to get complement of a number in Java?",
+          "answer": "~"
+        },
+        {
+          "type": "choice",
+          "question": "Which is conditional ternary operator?",
+          "choices": [
+            ">>",
+            "?:",
+            "<<",
+            "??"
+          ],
+          "answer": "?:"
+        },
+        {
+          "type": "blank",
+          "question": "Is there a way to increment and assign a value in a single statement?  If so, what is the operator?",
+          "choices": [
+            "No such operator",
+            "+=",
+            "=+",
+            "&="
+          ],
+          "answer": "+="
+        },
+        {
+          "type": "choice",
+          "question": "How to multiply two numbers in Java, say x, y are the numbers?",
+          "choices": [
+            "x . y",
+            "x mul y",
+            "x * y",
+            "x ** y"
+          ],
+          "answer": "x * y"
+        }
+      ]
+    },
+    {
+      "name": "Conditions and Loops",
+      "id": "1003",
+      "questions": [
+        {
+          "type": "choice",
+          "question": "Which is basic conditional branching statement in Java?",
+          "choices": [
+            "check",
+            "is",
+            "if",
+            "yes"
+          ],
+          "answer": "if"
+        },
+        {
+          "type": "choice",
+          "question": "What is the syntax for FOR loop?",
+          "choices": [
+            "for ( variable initialization; condition; variable update )",
+            "for ( condition; variable update ; exit status)",
+            "for item in sequence",
+            "for ( variable increment ; variable decrement; condition )"
+          ],
+          "answer": "for ( variable initialization; condition; variable update )"
+        },
+        {
+          "type": "choice",
+          "question": "Which looping makes sure loop is executed atleast once?",
+          "choices": [
+            "for",
+            "while",
+            "do..while",
+            "None"
+          ],
+          "answer": "do..while"
+        },
+        {
+          "type": "choice",
+          "question": "for (i = 0; i = 5; i++) { <statement>;} How many times will the statement inside the loop get executed?",
+          "choices": [
+            "5",
+            "1",
+            "6",
+            "infinite"
+          ],
+          "answer": "infinite"
+        },
+        {
+          "type": "blank",
+          "question": "What is the statement used to jump out of a loop",
+          "answer": "break"
+        },
+        {
+          "type": "blank",
+          "question": "What is the statement used to jump back to the beginning of the loop",
+          "answer": "continue"
+        },
+        {
+          "type": "blank",
+          "question": "Say true or false.  default label in switch statement will be executed atleast once even if the condition in matches or not.",
+          "answer": "false"
+        }
+      ]
+    },
+    {
+      "name": "Functions",
+      "id": "1004",
+      "questions": [
+        {
+          "type": "choice",
+          "question": "How to return two values from a function?",
+          "choices": [
+            "return a, b;",
+            "return (a,b);",
+            "return a:b;",
+            "Not possible to return two values."
+          ],
+          "answer": "Not possible to return two values."
+        },
+        {
+          "type": "choice",
+          "question": "What is the syntax for function declaration?",
+          "choices": [
+            "<return type> <function name>(<args>)",
+            "<args> <function name>(<return type>)",
+            "def <function name> (<args>)",
+            "function <function name> (<args>)"
+          ],
+          "answer": "<return type> <function name>(<args>)"
+        }
+      ]
+    }]

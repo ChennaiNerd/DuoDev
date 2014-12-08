@@ -102,17 +102,17 @@
         },
         {
           "type": "blank",
-          "question": "What is in bitwise AND operator in C?",
+          "question": "___ is bitwise AND operator in C?",
           "answer": "&"
         },
         {
           "type": "blank",
-          "question": "What is bitwise negation operator in C?",
+          "question": "___ is the bitwise operator used to get complement of a number in C?",
           "answer": "~"
         },
         {
           "type": "choice",
-          "question": "Which is conditional ternary operator",
+          "question": "Which is conditional ternary operator?",
           "choices": [
             ">>",
             "?:",
