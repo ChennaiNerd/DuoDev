@@ -77,7 +77,18 @@
             "set"
           ],
           "answer": "tuple"
-        }
+        },
+        {
+        "type": "choice",
+        "question": "Which is one of the way to import defaultdict from collections module?",
+        "choices": [
+          "from collections import defaultdict",
+          "import defaultdict from *",
+          "import defaultdict in collections",
+          "import defaultdict from collections"
+        ],
+        "from collections import defaultdict"
+      }
       ]
     },
     {
