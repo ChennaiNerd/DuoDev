@@ -1,4 +1,4 @@
-angular.module('myApp', [ 'ngSanitize', 'ui.router',  'firebase'  ])
+angular.module('myApp', [ 'ngSanitize', 'ngCookies', 'ui.router',  'firebase' ])
 
 .constant('version', '0.1')
 .constant('fbUrl', 'https://duodev.firebaseio.com/')

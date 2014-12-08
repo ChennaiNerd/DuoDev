@@ -1,7 +1,12 @@
 <div class="practice-section">
     <div class="container">
         <div class="pull-right">
-            <span class="badge badge-primary">{{selectionIndex + 1 }} / {{questionsCount}}</span>
+            <div class="heart-section">
+                <span class="icon ion-heart" ng-class="{'heart-full': heartCount >= 3, 'heart-empty animated zoomIn': heartCount < 3}"></span>
+                 <span class="icon ion-heart" ng-class="{'heart-full': heartCount >= 2, 'heart-empty animated zoomIn': heartCount < 2}"></span>
+                 <span class="icon ion-heart" ng-class="{'heart-full': heartCount >= 1, 'heart-empty animated zoomIn': heartCount < 1}"></span>
+            </div>
+            <span class="badge badge-primary" ng-if="!completed">{{selectionIndex + 1 }} / {{questionsCount}}</span>
         </div>
         <h1 class="heading no-bottom-margin">{{level.name}}</h1>
         <p class="subtitle"><a href="#/languages/{{language}}">{{language}} </a> - Level {{levelIndex}} / {{levelsCount}}</p>
@@ -35,7 +40,7 @@
                     </span>
                 </p>
 
-                <button class="btn btn-success btn-lg" ng-click="check(item, anwser)" ng-if="!correct">
+                <button class="btn btn-success btn-lg" ng-click="check(item, anwser)" ng-if="!correct" ng-disabled="!answer.value">
                    Check
                 </button>
                 <button class="btn btn-success btn-lg" ng-click="continue( $index + 1 )" ng-if="correct">Continue</button>
@@ -52,25 +57,25 @@
         </div>
         </div>
 
-        <div ng-if="completed">
-            <p class="lead text-success" ng-if="madeIt">
-                You are Great. You have learned {{language}}.
+        <div class="completion-section" ng-if="completed">
+            <div ng-if="madeIt">
+                <p class="lead text-success">Congratulations. You have learned <strong>{{language}}</strong></p>
+                <span class="trophy"> <i class="icon ion-trophy"></i></span>
+                <p>
+                    <a href="#/" class="btn btn-primary">Learn new language</a>
+                </p>
                 <br>
-                <br>
-                <a href="#/" class="btn btn-primary">Learn some other language</a>
-                <br>
-                <br>
-            </p>
+            </div>
 
-            <p class="lead text-success" ng-if="!madeIt">
-                Awesome! You are completed Level {{levelIndex}}
-                <br>
-                <br>
-                <a href="#/languages/{{language}}/practice/{{nextLevel}}" class="btn btn-primary" ng-if="!madeIt">Go to Next Level</a>
-                <br>
+            <div ng-if="!madeIt">
+                <p class="lead text-success">Awesome! You are completed <strong>Level {{levelIndex}}</strong></p>
+                <p>Earned <span class="score">{{score}}</span> points</p>
+                <p>
+                    <a href="#/languages/{{language}}/practice/{{nextLevel}}" class="btn btn-primary">Go to Next Level</a>
+                    <a class="btn btn-default" ng-click="repeat()">Repeat this Level</a>
+                </p>
                 <br>
             </p>
         </div>
     </div>
-
 </div>

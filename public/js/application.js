@@ -18,6 +18,7 @@
 //= require lib/angular.min
 //= require lib/angular-ui-router.min
 //= require lib/angular-sanitize.min
+//= require lib/angular-cookies.min
 //= require lib/firebase
 //= require lib/angularfire.min
 //= require lib/randomColor

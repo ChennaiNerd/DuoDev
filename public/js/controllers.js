@@ -93,8 +93,11 @@ angular.module('myApp')
 })
 
 .controller('PracticeController',
-        function($scope, $stateParams, $location, JSONService, $firebase, fbUrl, $window) {
+        function($scope, $state, $stateParams, $location, JSONService,
+                 $firebase, fbUrl, $window, $cookieStore) {
 
+    $scope.score = 10;
+    $scope.heartCount = 3;
     $scope.selectionIndex = 0;
     $scope.correct = false;
     $scope.wrong = false;
@@ -128,6 +131,17 @@ angular.module('myApp')
         } else {
             $scope.correct = false;
             $scope.wrong = true;
+            $scope.heartCount--;
+        }
+
+        if ($scope.heartCount < 0) {
+            $window.alert('Sorry!. You lost all your hearts. Try again.')
+            $state.transitionTo($state.current, $stateParams, {
+                reload: true,
+                inherit: false,
+                notify: true
+            });
+            return;
         }
 
         $scope.help = false;
@@ -144,10 +158,22 @@ angular.module('myApp')
             $scope.nextLevel = $scope.levelIndex + 1;
             $scope.selectionIndex = 0;
             $scope.completed = true;
+
+            // Store Score
+            $scope.score += $scope.heartCount;
+            var ref = new Firebase(fbUrl + '/users/' + $cookieStore.get('email') + '/score');
         }
 
         if ($scope.levelIndex === $scope.levelsCount) {
             $scope.madeIt = true;
         }
+    }
+
+    $scope.repeat = function () {
+        $state.transitionTo($state.current, $stateParams, {
+                reload: true,
+                inherit: false,
+                notify: true
+            });
     }
 });
