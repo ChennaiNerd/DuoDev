@@ -65,6 +65,7 @@ exports.app = function(req, res) {
             title: 'DuoDev',
             name: name,
             email: email,
+            userId: email.replace(/[@\.#$\[\]]/g,'_'),
             gravatar: gravatar
         });
     } else {

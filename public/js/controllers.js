@@ -3,14 +3,26 @@ angular.module('myApp')
 .controller('HomeController',
         function($scope, $rootScope, $firebase, fbUrl, $window) {
 
-    $scope.languages = [['Java', 'JavaScript', 'C'],
-                      ['Bash', 'Markdown', 'PHP']];
+    $scope.languages = [['C', 'Java', 'JavaScript'],
+                      ['Python', 'Bash', 'Markdown']];
 
     $scope.randomColor = function () {
         return {
             'background-color': $window.randomColor({luminosity: 'dark'})
         };
     }
+
+    // Set name
+    var ref = $firebase(new Firebase(fbUrl + 'users/' + $rootScope.userId));
+    ref.$set('name', $rootScope.userName);
+    ref.$set('gravatar', $rootScope.gravatar);
+
+    // Get my score
+    ref = new Firebase(fbUrl + 'users/' + $rootScope.userId + '/score');
+    var obj = $firebase(ref).$asObject();
+    obj.$loaded().then(function() {
+        $scope.myScore = (obj.$value || 0);
+     });
 
     // $scope.newMessage = '';
     // var ref = new Firebase(fbUrl + '/customers');
@@ -93,8 +105,8 @@ angular.module('myApp')
 })
 
 .controller('PracticeController',
-        function($scope, $state, $stateParams, $location, JSONService,
-                 $firebase, fbUrl, $window, $cookieStore) {
+        function($scope, $rootScope, $state, $stateParams, $location, JSONService,
+                 $firebase, fbUrl, $window) {
 
     $scope.score = 10;
     $scope.heartCount = 3;
@@ -161,7 +173,12 @@ angular.module('myApp')
 
             // Store Score
             $scope.score += $scope.heartCount;
-            var ref = new Firebase(fbUrl + '/users/' + $cookieStore.get('email') + '/score');
+            var ref = new Firebase(fbUrl + 'users/' + $rootScope.userId + '/score');
+            var obj = $firebase(ref).$asObject();
+            obj.$loaded().then(function() {
+                obj.$value = (obj.$value || 0) + $scope.score;
+                obj.$save();
+             });
         }
 
         if ($scope.levelIndex === $scope.levelsCount) {

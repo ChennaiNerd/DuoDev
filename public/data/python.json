@@ -1,84 +1,90 @@
-[{
-      "name": "Declaration and commenting",
-      "id": "1001",
-      "questions": [
-        {
-          "type": "choice",
-          "question": "How to declare a variable to hold an integer value?",
-          "choices": [
-            "var a = 0",
-            "int a = 0",
-            "a = 0",
-            "num a = 0"
-          ],
-          "answer": "a = 0"
-        },
-        {
-          "type": "blank",
-          "question": "How to comment a single line?",
-          "answer": "#"
-        },
-        {
-          "type": "choice",
-          "question": "How to do a multi-line comment?",
-          "choices": [
-            "''' '''",
-            "/* */",
-            "#",
-            "//"
-          ],
-          "answer": "''' '''"
-        },
-        {
-          "type": "choice",
-          "question": "Which is one of the way to declare a string constant?",
-          "choices": [
-            "char foo[] = \"foo\"",
-            "String foo = \"foo\"",
-            "foo = \"foo\"",
-            "char foo=\"foo\""
-          ],
-          "answer": "foo = \"foo\""
-        },
-        {
-          "type": "blank",
-          "question": "Say true of false. ['physics', 'chemistry', 1997, 2000] is a valid list?",
-          "answer": "true"
-        },
-        {
-          "type": "choice",
-          "question": "What is the qualifier used for representing only non-negative numbers?",
-          "choices": ["unsigned", "positive", "No such thing in Python", "signed"],
-          "answer": "No such thing in Python"
-        },
-        {
-          "type": "blank",
-          "question": "The keyword ___  is used to change or create global variables in a local context.",
-          "answer": "global"
-        },
-        {
-          "type": "choice",
-          "question": "Which is the basic data structure in Python to hold name value pairs?",
-          "choices": [
-            "hash",
-            "list",
-            "dict",
-            "tuple"
-          ],
-          "answer": "dict"
-        },
-        {
-          "type": "choice",
-          "question": "Which of the following is a immutable data type?",
-          "choices": [
-            "list",
-            "dict",
-            "tuple",
-            "set"
-          ],
-          "answer": "tuple"
-        },
-        {
+[
+  {
+    "name": "Declaration and commenting",
+    "id": "1001",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "How to declare a variable to hold an integer value?",
+        "choices": [
+          "var a = 0",
+          "int a = 0",
+          "a = 0",
+          "num a = 0"
+        ],
+        "answer": "a = 0"
+      },
+      {
+        "type": "blank",
+        "question": "How to comment a single line?",
+        "answer": "#"
+      },
+      {
+        "type": "choice",
+        "question": "How to do a multi-line comment?",
+        "choices": [
+          "''' '''",
+          "/* */",
+          "#",
+          "//"
+        ],
+        "answer": "''' '''"
+      },
+      {
+        "type": "choice",
+        "question": "Which is one of the way to declare a string constant?",
+        "choices": [
+          "char foo[] = \"foo\"",
+          "String foo = \"foo\"",
+          "foo = \"foo\"",
+          "char foo=\"foo\""
+        ],
+        "answer": "foo = \"foo\""
+      },
+      {
+        "type": "blank",
+        "question": "Say true of false. ['physics', 'chemistry', 1997, 2000] is a valid list?",
+        "answer": "true"
+      },
+      {
+        "type": "choice",
+        "question": "What is the qualifier used for representing only non-negative numbers?",
+        "choices": [
+          "unsigned",
+          "positive",
+          "No such thing in Python",
+          "signed"
+        ],
+        "answer": "No such thing in Python"
+      },
+      {
+        "type": "blank",
+        "question": "The keyword ___  is used to change or create global variables in a local context.",
+        "answer": "global"
+      },
+      {
+        "type": "choice",
+        "question": "Which is the basic data structure in Python to hold name value pairs?",
+        "choices": [
+          "hash",
+          "list",
+          "dict",
+          "tuple"
+        ],
+        "answer": "dict"
+      },
+      {
+        "type": "choice",
+        "question": "Which of the following is a immutable data type?",
+        "choices": [
+          "list",
+          "dict",
+          "tuple",
+          "set"
+        ],
+        "answer": "tuple"
+      },
+      {
         "type": "choice",
         "question": "Which is one of the way to import defaultdict from collections module?",
         "choices": [
@@ -87,148 +93,149 @@
           "import defaultdict in collections",
           "import defaultdict from collections"
         ],
-        "from collections import defaultdict"
+        "answer": "from collections import defaultdict"
       }
-      ]
-    },
-    {
-      "name": "Operators",
-      "id": "1002",
-      "questions": [
-        {
-          "type": "choice",
-          "question": "Which is bitwise OR operator?",
-          "choices": [
-            "or",
-            "xor",
-            "|",
-            "^"
-          ],
-          "answer": "|"
-        },
-        {
-          "type": "blank",
-          "question": "___ is the bitwise AND operator in Python?",
-          "answer": "&"
-        },
-        {
-          "type": "blank",
-          "question": "___ is the bitwise operator used to get complement of a number in Python?",
-          "answer": "~"
-        },
-        {
-          "type": "choice",
-          "question": "Which is the operator used to do union of two sets?",
-          "choices": [
-            "add",
-            "&",
-            "|",
-            "and"
-          ],
-          "answer": "|"
-        },
-        {
-          "type": "choice",
-          "question": "Is there a way to increment and assign a value in a single statement?  If so, what is the operator?",
-          "choices": [
-            "No such operator",
-            "+=",
-            "=+",
-            "&="
-          ],
-          "answer": "+="
-        },
-        {
-          "type": "choice",
-          "question": "How to multiply two numbers in C, say x, y are the numbers?",
-          "choices": [
-            "x . y",
-            "x mul y",
-            "x * y",
-            "x ** y"
-          ],
-          "answer": "x * y"
-        }
-      ]
-    },
-    {
-      "name": "Conditions and Loops",
-      "id": "1003",
-      "questions": [
-        {
-          "type": "choice",
-          "question": "Which is basic conditional branching statement in C?",
-          "choices": [
-            "check",
-            "is",
-            "if",
-            "yes"
-          ],
-          "answer": "if"
-        },
-        {
-          "type": "choice",
-          "question": "What is the syntax for FOR loop?",
-          "choices": [
-            "for ( variable initialization; condition; variable update )",
-            "for item in sequence",
-            "for (condition 1; condition 2; condition 3)",
-            "for ( variable increment ; variable decrement; condition )"
-          ],
-          "answer": "for item in sequence"
-        },
-        {
-          "type": "choice",
-          "question": "___ clause in is executed when the loop terminates through exhaustion of the list (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break statement.",
-          "choices": [
-            "assert",
-            "else",
-            "nobreak",
-            "None"
-          ],
-          "answer": "else"
-        },
-        {
-          "type": "blank",
-          "question": "What is the statement used to jump out of a loop",
-          "answer": "break"
-        },
-        {
-          "type": "blank",
-          "question": "What is the statement used to jump back to the beginning of the loop",
-          "answer": "continue"
-        }
-      ]
-    },
-    {
-      "name": "Functions",
-      "id": "1004",
-      "questions": [
-        {
-          "type": "blank",
-          "question": "What is the return value of the function which does not have return statement?",
-          "answer": "None"
-        },
-        {
-          "type": "blank",
-          "question": "Say true or false. A function can return two values.",
-          "answer": "true"
-        },
-        {
-          "type": "blank",
-          "question": "Say true or false.  A function can return even a function object.",
-          "answer": "true"
-        },
-        {
-          "type": "choice",
-          "question": "What is the syntax for function declaration?",
-          "choices": [
-            "<return type> <function name>(<args>)",
-            "<args> <function name>(<return type>)",
-            "def <function name> (<args>)",
-            "function <function name> (<args>, <return type>)"
-          ],
-          "answer": "def <function name> (<args>)"
-        }
-      ]
-    }]
+    ]
+  },
+  {
+    "name": "Operators",
+    "id": "1002",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "Which is bitwise OR operator?",
+        "choices": [
+          "or",
+          "xor",
+          "|",
+          "^"
+        ],
+        "answer": "|"
+      },
+      {
+        "type": "blank",
+        "question": "___ is the bitwise AND operator in Python?",
+        "answer": "&"
+      },
+      {
+        "type": "blank",
+        "question": "___ is the bitwise operator used to get complement of a number in Python?",
+        "answer": "~"
+      },
+      {
+        "type": "choice",
+        "question": "Which is the operator used to do union of two sets?",
+        "choices": [
+          "add",
+          "&",
+          "|",
+          "and"
+        ],
+        "answer": "|"
+      },
+      {
+        "type": "choice",
+        "question": "Is there a way to increment and assign a value in a single statement?  If so, what is the operator?",
+        "choices": [
+          "No such operator",
+          "+=",
+          "=+",
+          "&="
+        ],
+        "answer": "+="
+      },
+      {
+        "type": "choice",
+        "question": "How to multiply two numbers in C, say x, y are the numbers?",
+        "choices": [
+          "x . y",
+          "x mul y",
+          "x * y",
+          "x ** y"
+        ],
+        "answer": "x * y"
+      }
+    ]
+  },
+  {
+    "name": "Conditions and Loops",
+    "id": "1003",
+    "questions": [
+      {
+        "type": "choice",
+        "question": "Which is basic conditional branching statement in C?",
+        "choices": [
+          "check",
+          "is",
+          "if",
+          "yes"
+        ],
+        "answer": "if"
+      },
+      {
+        "type": "choice",
+        "question": "What is the syntax for FOR loop?",
+        "choices": [
+          "for ( variable initialization; condition; variable update )",
+          "for item in sequence",
+          "for (condition 1; condition 2; condition 3)",
+          "for ( variable increment ; variable decrement; condition )"
+        ],
+        "answer": "for item in sequence"
+      },
+      {
+        "type": "choice",
+        "question": "___ clause in is executed when the loop terminates through exhaustion of the list (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break statement.",
+        "choices": [
+          "assert",
+          "else",
+          "nobreak",
+          "None"
+        ],
+        "answer": "else"
+      },
+      {
+        "type": "blank",
+        "question": "What is the statement used to jump out of a loop",
+        "answer": "break"
+      },
+      {
+        "type": "blank",
+        "question": "What is the statement used to jump back to the beginning of the loop",
+        "answer": "continue"
+      }
+    ]
+  },
+  {
+    "name": "Functions",
+    "id": "1004",
+    "questions": [
+      {
+        "type": "blank",
+        "question": "What is the return value of the function which does not have return statement?",
+        "answer": "None"
+      },
+      {
+        "type": "blank",
+        "question": "Say true or false. A function can return two values.",
+        "answer": "true"
+      },
+      {
+        "type": "blank",
+        "question": "Say true or false.  A function can return even a function object.",
+        "answer": "true"
+      },
+      {
+        "type": "choice",
+        "question": "What is the syntax for function declaration?",
+        "choices": [
+          "<return type> <function name>(<args>)",
+          "<args> <function name>(<return type>)",
+          "def <function name> (<args>)",
+          "function <function name> (<args>, <return type>)"
+        ],
+        "answer": "def <function name> (<args>)"
+      }
+    ]
+  }
+]
