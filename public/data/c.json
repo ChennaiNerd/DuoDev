@@ -225,7 +225,7 @@
           "choices": [
             "return a, b;",
             "return (a,b);",
-            "return [a,b];",
+            "return a:b;",
             "Not possible to return two values."
           ],
           "answer": "Not possible to return two values."
