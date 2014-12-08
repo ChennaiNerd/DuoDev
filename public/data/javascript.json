@@ -56,6 +56,17 @@
           "var obj = {'mykey': 555}"
         ],
         "answer": ""
+      },
+      {
+        "type": "choice",
+        "question": "How to access member mykey of object myobject?",
+        "choices": [
+          "myobject->mykey",
+          "myobject.mykey",
+          "myobject(mykey)",
+          "*(myobject+mykey)"
+        ],
+        "answer": "myobject.mykey"
       }
     ]
   },
@@ -224,6 +235,16 @@
           "function <function name> (<args>)"
         ],
         "answer": "function <function name> (<args>)"
+      },
+      {
+        "type": "blank",
+        "question": "Say true or false.  It is possible to define function inside a function in Javascript.",
+        "answer": "true"
+      },
+      {
+        "type": "blank",
+        "question": "Say true or false.  It is not possible to define function without a name.",
+        "answer": "false"
       }
     ]
   }
